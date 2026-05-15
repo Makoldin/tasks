@@ -1,18 +1,9 @@
-export function sum(a: number, b: number): number {
-  return a + b;
-}
+import { HeroFactory } from './factory/HeroFactory';
+import { Game } from './game/Game';
+import { Logger } from './game/Logger';
 
-// Example usage of the addNumbers function
-console.log("Hello world");
+const logger = new Logger();
+const players = HeroFactory.generateHeroes(4); // Чётное количество игроков
 
-// Adding two integers
-const result1 = sum(5, 3);
-console.log(`5 + 3 = ${result1}`);
-
-// Adding two floating-point numbers
-const result2 = sum(2.5, 3.7);
-console.log(`2.5 + 3.7 = ${result2}`);
-
-// Adding an integer and a floating-point number
-const result3 = sum(10, 4.2);
-console.log(`10 + 4.2 = ${result3}`);
+const game = new Game(players, logger);
+game.start();
