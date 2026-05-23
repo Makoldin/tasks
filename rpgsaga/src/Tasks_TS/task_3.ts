@@ -13,7 +13,7 @@ function TaskA(a: number, b: number, x_start: number, x_end: number, dx: number)
     for (let x = x_start; x <= x_end; x += dx) {
         const y = calculateY(x, a, b);
         
-        results.push(`x = ${x.toFixed(1)}, y = ${y}`); 
+        results.push(`x = ${x}, y = ${y}`); 
     }
     
     return results; // возврат ответа
