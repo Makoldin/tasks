@@ -1,4 +1,4 @@
-function calculateY(x: number, a: number, b: number): number {
+export function calculateY(x: number, a: number, b: number): number {
     const log5_x = Math.log(x) / Math.log(5);
     const numerator = a * Math.sqrt(x) - b * log5_x;
     const denominator = Math.log10(Math.abs(x - 1));
@@ -7,7 +7,7 @@ function calculateY(x: number, a: number, b: number): number {
 }
 
 
-function TaskA(a: number, b: number, x_start: number, x_end: number, dx: number): string[] {
+export function TaskA(a: number, b: number, x_start: number, x_end: number, dx: number): string[] {
     const results: string[] = []; // строка для ответа
 
     for (let x = x_start; x <= x_end; x += dx) {
@@ -20,7 +20,7 @@ function TaskA(a: number, b: number, x_start: number, x_end: number, dx: number)
 }
 
 
-function TaskB(a: number, b: number, x_values: number[]): string[] {
+export function TaskB(a: number, b: number, x_values: number[]): string[] {
     const results: string[] = []; 
 
     for (let i = 0; i < x_values.length; i = i + 1) {

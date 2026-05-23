@@ -1,4 +1,5 @@
-import { calculateY, TaskA, TaskB } from './task_3';
+import { describe, expect, it } from 'vitest';
+import { calculateY, TaskA, TaskB } from '../src/Tasks_TS/task_3';
 
 describe('Задачи А и Б', () => {
     const a = 4.1;
