@@ -14,8 +14,8 @@ function calculateY(x: number, a: number, b: number): number {
 }
 
 // задача А
-
-console.log("____________задача А");
+function TaskA(): void{
+// console.log("____________задача А");
 
 const x_start: number = 1.2; // xн
 const x_end: number = 5.2;   // xк
@@ -26,10 +26,10 @@ for (let x = x_start; x <= x_end; x += dx) {
     const y = calculateY(x, a, b);
     console.log(`x = ${x}, y = ${y}`);
 }
-
+}
 // задача Б
-
-console.log("____________задача Б");
+function TaskB(): void{
+// console.log("____________задача Б");
 
 const x_values: number[] = [1.9, 2.15, 2.34, 2.73, 3.16];
 
@@ -37,4 +37,7 @@ for (let i = 0; i < x_values.length; i = i+1) {
     const x = x_values[i];
     const y = calculateY(x, a, b);
     console.log(`x${i + 1} = ${x}, y = ${y}`);
-}
+}}
+
+TaskA()
+TaskB()
